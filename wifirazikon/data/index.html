@@ -1,0 +1,51 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>controller</title>
+<script>
+function send(url){
+  var xhr = new XMLHttpRequest();
+  xhr.open("GET", url, true);
+  xhr.send();
+}
+</script>
+<style type="text/css">
+<!--
+.stebtn {
+	width: 100px;
+	height: 100px;
+	font-size: 25px;
+	font-weight: bolder;
+}
+-->
+</style>
+</head>
+
+<body>
+<table width="80" border="0" align="center" cellpadding="2">
+  <tbody>
+    <tr>
+      <td colspan="3" align="center" bgcolor="#FF0F0F" style="font-weight: bolder; font-size: 18px;">
+      <strong style="font-size: 36px; font-weight: bolder; color: #0FF090;">ラジコン<br>コントローラー</strong></td>
+    </tr>
+    <tr>
+      <td align="center"><input type="button" class="stebtn" onClick="send('/LT/')" value="左回転"></td>
+      <td align="center"><input type="button" class="stebtn" onClick="send('/GO/')" value="↑"></td>
+      <td align="center"><input type="button" class="stebtn" onClick="send('/RT/')" value="右回転"></td>
+    </tr>
+    <tr>
+      <td align="center"><input type="button" class="stebtn" onClick="send('/LE/')" value="←"></td>
+      <td align="center"><input type="button" class="stebtn" style=" background-color:#AA0000" onClick="send('/ST/')" value="stop"></td>
+      <td align="center"><input type="button" class="stebtn" onClick="send('/RI/')" value="→"></td>
+      
+    </tr>
+    <tr>
+      <td align="center"><input type="button" class="stebtn" onClick="send('/AZ/')" value=""></td>
+      <td align="center"><input type="button" class="stebtn" onClick="send('/BB/')" value="↓"></td>
+      <td align="center"><input type="button" class="stebtn" onClick="send('/ZA/')" value=""></td>
+    </tr>
+  </tbody>
+</table>
+</body>
+</html>
